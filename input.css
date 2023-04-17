@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Cabin', sans-serif;
+    color: #e2e2e2;
+    scrollbar-color: #fcf8f8;
+    scrollbar-width: 1rem;
+    scrollbar-track-color: #36D1DC;
+}
+
+
+*::-webkit-scrollbar {
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #36D1DC;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+    background-color: #fcf8f8;
+}
+
+body {
+    background: #36D1DC;
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
+    background: linear-gradient(to right, #5B86E5, #36D1DC);
+}
+
+h1 {
+    vertical-align: middle;
+}
+
+img.icon {
+    display: inline-block;
+    width: calc(2.5rem + 2vw);
+    vertical-align: middle;
+    margin-right: 0.25rem;
+}
+
+div.note {
+    width: 100%;
+    background-color: #fff;
+    color: #2e2e2f;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+div.note div.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+
+}
+
+div.note span.type {
+    width: fit-content;
+    border-radius: 100px;
+    padding: 4px 13px;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+div.note span.date {
+    padding: 4px 13px;
+    text-align: center;
+    font-size: 1rem;
+    color: #959595;
+}
+
+div.note span.type.encrypt {
+    background-color: #4072dd;
+}
+
+div.note span.type.decrypt {
+    background-color: #38b267;
+}
+
+button {
+    background-color: #f3f7fe;
+    border: none;
+    border-radius: 8px;
+    width: 8rem;
+    height: 2.5rem;
+    transition: 0.3s;
+}
+
+button:hover {
+    color: #fff;
+    box-shadow: 0 0 0 5px var(--tw-shadow-color);
+}
+
+@media (min-width: 640px) {
+    div.note {
+        width: 48%;
+    }
+}
+
+@media screen and (min-width: 642px) and (max-width: 848px) {
+    button.text-\[\#4072dd\] {
+        margin-bottom: 0.75rem;
+    }
+}
+
+div.note:hover span.type { background-color: #2e2e2f; }
+div.note:hover span.type.encrypt { color: #4072dd; }
+div.note:hover span.type.decrypt { color: #38b267; }
+div.note:hover span.type::before {
+    content: "Copy ";
+    text-align: center;
+    color: #e2e2e2;
+    transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.bundle.css">
+    <link rel="shortcut icon" href="./assets/logo.ico" type="image/x-icon">
+    <title>Text Encryptor - Alura Challenge</title>
+</head>
+
+<body>
+    <div class="w-full text-center my-4 tablet:text-left tablet:pl-4">
+        <img src="./assets/logo.png" alt="logo" class="icon">
+        <h1 class="font-bold text-4xl inline-block tablet:text-5xl">Cryptofy</h1>
+    </div>
+    <div class="w-full flex flex-col tablet:flex-row">
+        <div class="w-full px-2 tablet:w-1/3 tablet:mr-4 tablet:pl-4 tablet:pr-0">
+            <textarea id="message" placeholder="Insert here your text..."
+                class="w-full h-[32rem] tablet:h-[77vh] bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg text-lg desktop:text-2xl text-white resize-none p-4 placeholder:text-slate-600 outline-none mb-4 tablet:mb-2"
+                autocomplete="off"></textarea>
+            <div
+                class="w-full flex items-center justify-evenly mb-4 tablet:justify-around tablet:mb-0 tablet:flex-wrap">
+                <button class="text-[#4072dd] shadow-[#4072dd5f] hover:bg-[#4072dd]" id="encrypt">Encrypt</button>
+                <button class="text-[#38b267] shadow-[#20914b5f] hover:bg-[#38b267]" id="decrypt">Decrypt</button>
+            </div>
+        </div>
+        <div id="notes-container"
+            class="w-full flex flex-col mb-4 px-2 tablet:w-2/3 tablet:pb-0 transition-all tablet:pr-4 tablet:pl-0 tablet:flex-row tablet:flex-wrap tablet:justify-around">
+        </div>
+    </div>
+</body>
+<dev by="@Dawnt" github="https://github.com/DawntDev" date="2023-04-11" />
+
+</html>
